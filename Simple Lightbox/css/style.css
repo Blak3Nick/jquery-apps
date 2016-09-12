@@ -1,6 +1,6 @@
 body {
 	font-family: sans-serif;
-	background: #384047;
+	background: #003399;
 }
 h1 {
 	color: #fff;
@@ -41,4 +41,7 @@ a {
 
 #overlay img {
  margin-top: 10%;
+}
+#overlay p {
+  color: white;
 }

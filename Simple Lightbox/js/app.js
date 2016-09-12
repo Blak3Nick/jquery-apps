@@ -2,10 +2,10 @@
 
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
-
+var $caption = $("<p></p>");
 
 $overlay.append($image);
-
+$overlay.append($caption);
 
 $("body").append($overlay);
 
@@ -18,9 +18,9 @@ $("#imageGallery a").click(function(event){
 
   $overlay.show();
 
+  var captionText = $(this).children("img").attr("alt");
 
-
-
+  $caption.text(captionText);
 });
 
 
