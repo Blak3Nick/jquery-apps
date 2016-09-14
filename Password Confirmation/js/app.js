@@ -24,7 +24,10 @@ function passwordEvent(){
       $password.next().show();
     }
 }
-
+$("#submit").click(function(){
+  alert("Success!");
+  event.preventDefault();
+});
 //When event happens on password input
 
 function confirmPasswordEvent() {
@@ -36,7 +39,8 @@ function confirmPasswordEvent() {
   }
 }
 function enableSubmitEvent() {
-
+  $("#submit").prop("disabled", !canSubmit());
 }
-$password.focus(passwordEvent).keyup(passwordEvent).keyup(confirmPasswordEvent);
-$confirmpassword.focus(confirmPasswordEvent).keyup(confirmPasswordEvent);
+$password.focus(passwordEvent).keyup(passwordEvent).keyup(confirmPasswordEvent).keyup(enableSubmitEvent);
+$confirmpassword.focus(confirmPasswordEvent).keyup(confirmPasswordEvent).keyup(enableSubmitEvent);
+enableSubmitEvent();
